@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Exchange Calculator</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #102429;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #043643;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color:#105532;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4a1b65;
+  border-radius: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ab0a57;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #090d46;
+  color: #fcfcfc;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 10px;
+  color:#ab0a57;
+  border: 1px solid #ed0909;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+      <div class="container">
+        <h1>Currency Exchange Calculator</h1>
+        <form id="exchange-form">
+          <div class="form-group">
+            <label for="from-currency">From Currency:</label>
+            <select id="from-currency">
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="BRL">Brazilian Real (BRL)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="TRY">Turkish Lira (TRY)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+          </div>
+          <div class="form-group">
+            <label for="to-currency">To Currency:</label>
+            <select id="to-currency">
+              <option value="GBP">British Pound (GBP)</option>
+              <option value="USD">US Dollar (USD)</option>
+              <option value="EUR">Euro (EUR)</option>
+              <option value="BRL">Brazilian Real (BRL)</option>
+              <option value="JPY">Japanese Yen (JPY)</option>
+              <option value="TRY">Turkish Lira (TRY)</option>
+            </select>
+          </div>
+          <button type="submit">Convert</button>
+        </form>
+        <div id="result"></div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+    </html>
